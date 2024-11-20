@@ -1,0 +1,7 @@
+:root {
+	scroll-behavior: smooth;
+}
+
+:where(:any-link) {
+	color: rgb(var(--v-theme-on-primary));
+}
