@@ -27,9 +27,9 @@ export default createVuetify({
 		thresholds: {
 			xs: 0,
 			sm: 340,
-			md: 755,
-			lg: 1170,
-			xl: 1280,
+			md: 600,
+			lg: 920,
+			xl: 1170,
 		},
 	},
 	icons: {
