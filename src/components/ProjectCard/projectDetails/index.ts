@@ -1,1 +1,1 @@
-export default [ImgShop]
+export default [ImgShop, StackedCard]

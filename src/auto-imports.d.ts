@@ -10,9 +10,11 @@ declare global {
   const I18nextLogo: typeof import('./assets/logos/AllLogos')['I18nextLogo']
   const ImgShop: typeof import('./components/ProjectCard/projectDetails/ImgShop')['default']
   const LodashLogo: typeof import('./assets/logos/AllLogos')['LodashLogo']
+  const LoremIpsum: typeof import('lorem-ipsum')['LoremIpsum']
   const Navigation: typeof import('swiper/modules')['Navigation']
   const NetlifyLogo: typeof import('./assets/logos/AllLogos')['NetlifyLogo']
   const PiniaLogo: typeof import('./assets/logos/AllLogos')['PiniaLogo']
+  const StackedCard: typeof import('./components/ProjectCard/projectDetails/StackedCard')['default']
   const ViteLogo: typeof import('./assets/logos/AllLogos')['ViteLogo']
   const VuetifyLogo: typeof import('./assets/logos/AllLogos')['VuetifyLogo']
   const assertIsEventTarget: typeof import('./use/utils/useAsserts')['assertIsEventTarget']
@@ -29,12 +31,14 @@ declare global {
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const h: typeof import('vue')['h']
   const html2canvas: typeof import('html2canvas')['default']
+  const imgs: typeof import('./components/StackedCard/imgs')['default']
   const inject: typeof import('vue')['inject']
   const isProxy: typeof import('vue')['isProxy']
   const isReactive: typeof import('vue')['isReactive']
   const isReadonly: typeof import('vue')['isReadonly']
   const isRef: typeof import('vue')['isRef']
   const markRaw: typeof import('vue')['markRaw']
+  const nanoid: typeof import('nanoid')['nanoid']
   const nextTick: typeof import('vue')['nextTick']
   const onActivated: typeof import('vue')['onActivated']
   const onBeforeMount: typeof import('vue')['onBeforeMount']
@@ -59,6 +63,7 @@ declare global {
   const shallowReactive: typeof import('vue')['shallowReactive']
   const shallowReadonly: typeof import('vue')['shallowReadonly']
   const shallowRef: typeof import('vue')['shallowRef']
+  const throttle: typeof import('lodash-es')['throttle']
   const toRaw: typeof import('vue')['toRaw']
   const toRef: typeof import('vue')['toRef']
   const toRefs: typeof import('vue')['toRefs']
@@ -106,9 +111,11 @@ declare module 'vue' {
     readonly I18nextLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['I18nextLogo']>
     readonly ImgShop: UnwrapRef<typeof import('./components/ProjectCard/projectDetails/ImgShop')['default']>
     readonly LodashLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['LodashLogo']>
+    readonly LoremIpsum: UnwrapRef<typeof import('lorem-ipsum')['LoremIpsum']>
     readonly Navigation: UnwrapRef<typeof import('swiper/modules')['Navigation']>
     readonly NetlifyLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['NetlifyLogo']>
     readonly PiniaLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['PiniaLogo']>
+    readonly StackedCard: UnwrapRef<typeof import('./components/ProjectCard/projectDetails/StackedCard')['default']>
     readonly ViteLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['ViteLogo']>
     readonly VuetifyLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['VuetifyLogo']>
     readonly assertIsEventTarget: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsEventTarget']>
@@ -125,12 +132,14 @@ declare module 'vue' {
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly html2canvas: UnwrapRef<typeof import('html2canvas')['default']>
+    readonly imgs: UnwrapRef<typeof import('./components/StackedCard/imgs')['default']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly isProxy: UnwrapRef<typeof import('vue')['isProxy']>
     readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
     readonly isReadonly: UnwrapRef<typeof import('vue')['isReadonly']>
     readonly isRef: UnwrapRef<typeof import('vue')['isRef']>
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
+    readonly nanoid: UnwrapRef<typeof import('nanoid')['nanoid']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
     readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>
@@ -155,6 +164,7 @@ declare module 'vue' {
     readonly shallowReactive: UnwrapRef<typeof import('vue')['shallowReactive']>
     readonly shallowReadonly: UnwrapRef<typeof import('vue')['shallowReadonly']>
     readonly shallowRef: UnwrapRef<typeof import('vue')['shallowRef']>
+    readonly throttle: UnwrapRef<typeof import('lodash-es')['throttle']>
     readonly toRaw: UnwrapRef<typeof import('vue')['toRaw']>
     readonly toRef: UnwrapRef<typeof import('vue')['toRef']>
     readonly toRefs: UnwrapRef<typeof import('vue')['toRefs']>

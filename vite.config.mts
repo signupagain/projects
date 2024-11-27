@@ -41,6 +41,15 @@ export default defineConfig({
 				{
 					html2canvas: [['default', 'html2canvas']],
 				},
+				{
+					'lorem-ipsum': ['LoremIpsum'],
+				},
+				{
+					nanoid: ['nanoid'],
+				},
+				{
+					'lodash-es': ['throttle'],
+				},
 			],
 			dts: 'src/auto-imports.d.ts',
 			eslintrc: {
