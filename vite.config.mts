@@ -25,12 +25,29 @@ export default defineConfig({
 				{
 					'vue-router/auto': ['useRoute', 'useRouter'],
 				},
+				{
+					from: 'swiper/element',
+					type: true,
+					imports: ['SwiperContainer'],
+				},
+				{
+					from: 'swiper/types',
+					type: true,
+					imports: ['SwiperOptions'],
+				},
+				{
+					'swiper/modules': ['Navigation'],
+				},
+				{
+					html2canvas: [['default', 'html2canvas']],
+				},
 			],
 			dts: 'src/auto-imports.d.ts',
 			eslintrc: {
 				enabled: true,
 			},
 			vueTemplate: true,
+			dirs: ['src/assets/logos', 'src/components/**/*', 'src/use/**/*'],
 		}),
 		Components({
 			dts: 'src/components.d.ts',
