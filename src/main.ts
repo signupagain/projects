@@ -13,6 +13,11 @@ import App from './App.vue'
 // Composables
 import { createApp } from 'vue'
 
+// Libraries
+import { register } from 'swiper/element/bundle'
+
+register()
+
 const app = createApp(App)
 
 registerPlugins(app)

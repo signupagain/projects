@@ -53,7 +53,15 @@ export default defineConfig({
 			dts: 'src/components.d.ts',
 		}),
 		Vue({
-			template: { transformAssetUrls },
+			template: {
+				transformAssetUrls,
+				compilerOptions: {
+					isCustomElement: tag => {
+						const prefixs = ['swiper-']
+						return prefixs.some(prefix => tag.includes(prefix))
+					},
+				},
+			},
 		}),
 		// https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
 		Vuetify({

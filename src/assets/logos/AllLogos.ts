@@ -1,0 +1,7 @@
+export { default as VuetifyLogo } from './Vuetify.svg'
+export { default as NetlifyLogo } from './Netlify.png'
+export { default as LodashLogo } from './Lodash.png'
+export { default as ViteLogo } from './vite.png'
+export { default as Html2CanvasLogo } from './Html2Canvas.png'
+export { default as PiniaLogo } from './Pinia.svg'
+export { default as I18nextLogo } from './I18next.svg'

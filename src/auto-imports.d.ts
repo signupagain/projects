@@ -6,6 +6,19 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const Html2CanvasLogo: typeof import('./assets/logos/AllLogos')['Html2CanvasLogo']
+  const I18nextLogo: typeof import('./assets/logos/AllLogos')['I18nextLogo']
+  const ImgShop: typeof import('./components/ProjectCard/projectDetails/ImgShop')['default']
+  const LodashLogo: typeof import('./assets/logos/AllLogos')['LodashLogo']
+  const Navigation: typeof import('swiper/modules')['Navigation']
+  const NetlifyLogo: typeof import('./assets/logos/AllLogos')['NetlifyLogo']
+  const PiniaLogo: typeof import('./assets/logos/AllLogos')['PiniaLogo']
+  const ViteLogo: typeof import('./assets/logos/AllLogos')['ViteLogo']
+  const VuetifyLogo: typeof import('./assets/logos/AllLogos')['VuetifyLogo']
+  const assertIsEventTarget: typeof import('./use/utils/useAsserts')['assertIsEventTarget']
+  const assertIsHTMLElement: typeof import('./use/utils/useAsserts')['assertIsHTMLElement']
+  const assertIsMouseEvent: typeof import('./use/utils/useAsserts')['assertIsMouseEvent']
+  const assertIsNode: typeof import('./use/utils/useAsserts')['assertIsNode']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
   const customRef: typeof import('vue')['customRef']
@@ -15,6 +28,7 @@ declare global {
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const h: typeof import('vue')['h']
+  const html2canvas: typeof import('html2canvas')['default']
   const inject: typeof import('vue')['inject']
   const isProxy: typeof import('vue')['isProxy']
   const isReactive: typeof import('vue')['isReactive']
@@ -24,8 +38,6 @@ declare global {
   const nextTick: typeof import('vue')['nextTick']
   const onActivated: typeof import('vue')['onActivated']
   const onBeforeMount: typeof import('vue')['onBeforeMount']
-  const onBeforeRouteLeave: (typeof import('vue-router'))['onBeforeRouteLeave']
-  const onBeforeRouteUpdate: (typeof import('vue-router'))['onBeforeRouteUpdate']
   const onBeforeUnmount: typeof import('vue')['onBeforeUnmount']
   const onBeforeUpdate: typeof import('vue')['onBeforeUpdate']
   const onDeactivated: typeof import('vue')['onDeactivated']
@@ -38,6 +50,7 @@ declare global {
   const onUnmounted: typeof import('vue')['onUnmounted']
   const onUpdated: typeof import('vue')['onUpdated']
   const onWatcherCleanup: typeof import('vue')['onWatcherCleanup']
+  const projectDetails: typeof import('./components/ProjectCard/projectDetails/index')['default']
   const provide: typeof import('vue')['provide']
   const reactive: typeof import('vue')['reactive']
   const readonly: typeof import('vue')['readonly']
@@ -55,13 +68,17 @@ declare global {
   const useAttrs: typeof import('vue')['useAttrs']
   const useCssModule: typeof import('vue')['useCssModule']
   const useCssVars: typeof import('vue')['useCssVars']
+  const useEvent: typeof import('./use/utils/useEvent')['default']
   const useId: typeof import('vue')['useId']
-  const useLink: (typeof import('vue-router'))['useLink']
+  const useInterval: typeof import('./use/utils/useInterval')['default']
   const useModel: typeof import('vue')['useModel']
   const useRoute: typeof import('vue-router/auto')['useRoute']
   const useRouter: typeof import('vue-router/auto')['useRouter']
+  const useScreenShot: typeof import('./use/utils/useScreenShot')['default']
+  const useSkillsCarousell: typeof import('./components/ProjectCard/useSkillsCarousell')['default']
   const useSlots: typeof import('vue')['useSlots']
   const useTemplateRef: typeof import('vue')['useTemplateRef']
+  const useTracingCursor: typeof import('./use/utils/useTracingCursor')['default']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
   const watchPostEffect: typeof import('vue')['watchPostEffect']
@@ -72,6 +89,12 @@ declare global {
   // @ts-ignore
   export type { Component, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue'
   import('vue')
+  // @ts-ignore
+  export type { SwiperContainer } from 'swiper/element'
+  import('swiper/element')
+  // @ts-ignore
+  export type { SwiperOptions } from 'swiper/types'
+  import('swiper/types')
 }
 // for vue template auto import
 import { UnwrapRef } from 'vue'
@@ -79,6 +102,19 @@ declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly Html2CanvasLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['Html2CanvasLogo']>
+    readonly I18nextLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['I18nextLogo']>
+    readonly ImgShop: UnwrapRef<typeof import('./components/ProjectCard/projectDetails/ImgShop')['default']>
+    readonly LodashLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['LodashLogo']>
+    readonly Navigation: UnwrapRef<typeof import('swiper/modules')['Navigation']>
+    readonly NetlifyLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['NetlifyLogo']>
+    readonly PiniaLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['PiniaLogo']>
+    readonly ViteLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['ViteLogo']>
+    readonly VuetifyLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['VuetifyLogo']>
+    readonly assertIsEventTarget: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsEventTarget']>
+    readonly assertIsHTMLElement: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsHTMLElement']>
+    readonly assertIsMouseEvent: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsMouseEvent']>
+    readonly assertIsNode: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsNode']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
@@ -88,6 +124,7 @@ declare module 'vue' {
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
+    readonly html2canvas: UnwrapRef<typeof import('html2canvas')['default']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly isProxy: UnwrapRef<typeof import('vue')['isProxy']>
     readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
@@ -109,6 +146,7 @@ declare module 'vue' {
     readonly onUnmounted: UnwrapRef<typeof import('vue')['onUnmounted']>
     readonly onUpdated: UnwrapRef<typeof import('vue')['onUpdated']>
     readonly onWatcherCleanup: UnwrapRef<typeof import('vue')['onWatcherCleanup']>
+    readonly projectDetails: UnwrapRef<typeof import('./components/ProjectCard/projectDetails/index')['default']>
     readonly provide: UnwrapRef<typeof import('vue')['provide']>
     readonly reactive: UnwrapRef<typeof import('vue')['reactive']>
     readonly readonly: UnwrapRef<typeof import('vue')['readonly']>
@@ -126,12 +164,17 @@ declare module 'vue' {
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
+    readonly useEvent: UnwrapRef<typeof import('./use/utils/useEvent')['default']>
     readonly useId: UnwrapRef<typeof import('vue')['useId']>
+    readonly useInterval: UnwrapRef<typeof import('./use/utils/useInterval')['default']>
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
     readonly useRoute: UnwrapRef<typeof import('vue-router/auto')['useRoute']>
     readonly useRouter: UnwrapRef<typeof import('vue-router/auto')['useRouter']>
+    readonly useScreenShot: UnwrapRef<typeof import('./use/utils/useScreenShot')['default']>
+    readonly useSkillsCarousell: UnwrapRef<typeof import('./components/ProjectCard/useSkillsCarousell')['default']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
+    readonly useTracingCursor: UnwrapRef<typeof import('./use/utils/useTracingCursor')['default']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
     readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>
