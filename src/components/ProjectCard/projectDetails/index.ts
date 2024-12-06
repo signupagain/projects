@@ -1,1 +1,1 @@
-export default [ImgShop, StackedCard]
+export default [ImgShop, StackedCard, ColorfulBar]

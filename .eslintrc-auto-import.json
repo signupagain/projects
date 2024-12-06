@@ -1,5 +1,6 @@
 {
   "globals": {
+    "ColorfulBar": true,
     "Component": true,
     "ComponentPublicInstance": true,
     "ComputedRef": true,
@@ -28,8 +29,10 @@
     "ViteLogo": true,
     "VuetifyLogo": true,
     "WritableComputedRef": true,
+    "assertIsDefined": true,
     "assertIsEventTarget": true,
     "assertIsHTMLElement": true,
+    "assertIsKeyof": true,
     "assertIsMouseEvent": true,
     "assertIsNode": true,
     "computed": true,
@@ -98,8 +101,6 @@
     "watch": true,
     "watchEffect": true,
     "watchPostEffect": true,
-    "watchSyncEffect": true,
-    "assertIsDefined": true,
-    "assertIsKeyof": true
+    "watchSyncEffect": true
   }
 }
