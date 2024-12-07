@@ -13,5 +13,6 @@ declare module 'vue' {
     ProjectCard: typeof import('./components/ProjectCard/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Steps: typeof import('./components/Steps/index.vue')['default']
   }
 }

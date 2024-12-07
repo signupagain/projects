@@ -16,6 +16,7 @@ declare global {
   const NetlifyLogo: typeof import('./assets/logos/AllLogos')['NetlifyLogo']
   const PiniaLogo: typeof import('./assets/logos/AllLogos')['PiniaLogo']
   const StackedCard: typeof import('./components/ProjectCard/projectDetails/StackedCard')['default']
+  const Steps: typeof import('./components/ProjectCard/projectDetails/Steps')['default']
   const ViteLogo: typeof import('./assets/logos/AllLogos')['ViteLogo']
   const VuetifyLogo: typeof import('./assets/logos/AllLogos')['VuetifyLogo']
   const assertIsDefined: typeof import('./use/utils/useAsserts')['assertIsDefined']
@@ -85,6 +86,7 @@ declare global {
   const useScreenShot: typeof import('./use/utils/useScreenShot')['default']
   const useSkillsCarousell: typeof import('./components/ProjectCard/useSkillsCarousell')['default']
   const useSlots: typeof import('vue')['useSlots']
+  const useSteps: typeof import('./components/Steps/useSteps')['default']
   const useTemplateRef: typeof import('vue')['useTemplateRef']
   const useTracingCursor: typeof import('./use/utils/useTracingCursor')['default']
   const watch: typeof import('vue')['watch']
@@ -120,6 +122,7 @@ declare module 'vue' {
     readonly NetlifyLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['NetlifyLogo']>
     readonly PiniaLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['PiniaLogo']>
     readonly StackedCard: UnwrapRef<typeof import('./components/ProjectCard/projectDetails/StackedCard')['default']>
+    readonly Steps: UnwrapRef<typeof import('./components/ProjectCard/projectDetails/Steps')['default']>
     readonly ViteLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['ViteLogo']>
     readonly VuetifyLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['VuetifyLogo']>
     readonly assertIsDefined: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsDefined']>
@@ -189,6 +192,7 @@ declare module 'vue' {
     readonly useScreenShot: UnwrapRef<typeof import('./use/utils/useScreenShot')['default']>
     readonly useSkillsCarousell: UnwrapRef<typeof import('./components/ProjectCard/useSkillsCarousell')['default']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
+    readonly useSteps: UnwrapRef<typeof import('./components/Steps/useSteps')['default']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
     readonly useTracingCursor: UnwrapRef<typeof import('./use/utils/useTracingCursor')['default']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
