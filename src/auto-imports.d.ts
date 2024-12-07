@@ -17,8 +17,10 @@ declare global {
   const StackedCard: typeof import('./components/ProjectCard/projectDetails/StackedCard')['default']
   const ViteLogo: typeof import('./assets/logos/AllLogos')['ViteLogo']
   const VuetifyLogo: typeof import('./assets/logos/AllLogos')['VuetifyLogo']
+  const assertIsDefined: typeof import('./use/utils/useAsserts')['assertIsDefined']
   const assertIsEventTarget: typeof import('./use/utils/useAsserts')['assertIsEventTarget']
   const assertIsHTMLElement: typeof import('./use/utils/useAsserts')['assertIsHTMLElement']
+  const assertIsKeyof: typeof import('./use/utils/useAsserts')['assertIsKeyof']
   const assertIsMouseEvent: typeof import('./use/utils/useAsserts')['assertIsMouseEvent']
   const assertIsNode: typeof import('./use/utils/useAsserts')['assertIsNode']
   const computed: typeof import('vue')['computed']
@@ -118,8 +120,10 @@ declare module 'vue' {
     readonly StackedCard: UnwrapRef<typeof import('./components/ProjectCard/projectDetails/StackedCard')['default']>
     readonly ViteLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['ViteLogo']>
     readonly VuetifyLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['VuetifyLogo']>
+    readonly assertIsDefined: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsDefined']>
     readonly assertIsEventTarget: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsEventTarget']>
     readonly assertIsHTMLElement: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsHTMLElement']>
+    readonly assertIsKeyof: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsKeyof']>
     readonly assertIsMouseEvent: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsMouseEvent']>
     readonly assertIsNode: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsNode']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>

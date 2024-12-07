@@ -1,0 +1,21 @@
+$prefix: 'xMoveIn';
+
+.#{$prefix}-enter-active {
+	animation: #{$prefix}-enter 0.8s;
+}
+
+.#{$prefix}-leave-active {
+	animation: #{$prefix}-leave 0.8s;
+}
+
+@keyframes #{$prefix}-enter {
+	0% {
+		transform: translate(-90dvw);
+	}
+}
+
+@keyframes #{$prefix}-leave {
+	100% {
+		transform: translate(130dvw);
+	}
+}

@@ -98,6 +98,8 @@
     "watch": true,
     "watchEffect": true,
     "watchPostEffect": true,
-    "watchSyncEffect": true
+    "watchSyncEffect": true,
+    "assertIsDefined": true,
+    "assertIsKeyof": true
   }
 }
