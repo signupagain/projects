@@ -56,7 +56,12 @@ export default defineConfig({
 				enabled: true,
 			},
 			vueTemplate: true,
-			dirs: ['src/assets/logos', 'src/components/**/*', 'src/use/**/*'],
+			dirs: [
+				'src/assets/logos',
+				'src/components/**/*',
+				'src/use/**/*',
+				'src/stores/*',
+			],
 		}),
 		Components({
 			dts: 'src/components.d.ts',

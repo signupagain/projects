@@ -1,7 +1,12 @@
 <template>
 	<v-app style="background: transparent">
 		<router-view v-slot="{ Component, route }">
-			<transition mode="out-in" :name="route.meta.transition ?? 'xMoveIn'">
+			<transition
+				mode="out-in"
+				:name="route.meta.transition ?? 'xMoveIn'"
+				@before-enter="recordTransitionStatus(false)"
+				@after-enter="recordTransitionStatus(true)"
+			>
 				<component :is="Component"></component>
 			</transition>
 		</router-view>
@@ -47,5 +52,15 @@
 		poisson: {
 			enable: true,
 		},
+	}
+
+	const recordTransitionStatus = (bool: boolean) => {
+		const store = useAppStore()
+
+		store.$patch({
+			isTransitionEnd: bool,
+		})
+
+		if (bool) scroll({ top: 0, left: 0 })
 	}
 </script>
