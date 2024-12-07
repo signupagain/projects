@@ -1,1 +1,1 @@
-export default [ImgShop, StackedCard, ColorfulBar, Steps, VueDemo]
+export default [ImgShop, StackedCard, ColorfulBar, Steps, VueDemo, NotFound]

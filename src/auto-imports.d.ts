@@ -14,6 +14,7 @@ declare global {
   const LoremIpsum: typeof import('lorem-ipsum')['LoremIpsum']
   const Navigation: typeof import('swiper/modules')['Navigation']
   const NetlifyLogo: typeof import('./assets/logos/AllLogos')['NetlifyLogo']
+  const NotFound: typeof import('./components/ProjectCard/projectDetails/NotFound')['default']
   const PiniaLogo: typeof import('./assets/logos/AllLogos')['PiniaLogo']
   const StackedCard: typeof import('./components/ProjectCard/projectDetails/StackedCard')['default']
   const Steps: typeof import('./components/ProjectCard/projectDetails/Steps')['default']
@@ -130,6 +131,7 @@ declare module 'vue' {
     readonly LoremIpsum: UnwrapRef<typeof import('lorem-ipsum')['LoremIpsum']>
     readonly Navigation: UnwrapRef<typeof import('swiper/modules')['Navigation']>
     readonly NetlifyLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['NetlifyLogo']>
+    readonly NotFound: UnwrapRef<typeof import('./components/ProjectCard/projectDetails/NotFound')['default']>
     readonly PiniaLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['PiniaLogo']>
     readonly StackedCard: UnwrapRef<typeof import('./components/ProjectCard/projectDetails/StackedCard')['default']>
     readonly Steps: UnwrapRef<typeof import('./components/ProjectCard/projectDetails/Steps')['default']>
