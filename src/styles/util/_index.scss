@@ -1,0 +1,10 @@
+@forward 'animations';
+
+.clip {
+	position: absolute;
+	clip-path: circle(0);
+	width: 1px;
+	height: 1px;
+	top: 0;
+	z-index: -1;
+}
