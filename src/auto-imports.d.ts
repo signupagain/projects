@@ -18,6 +18,7 @@ declare global {
   const StackedCard: typeof import('./components/ProjectCard/projectDetails/StackedCard')['default']
   const Steps: typeof import('./components/ProjectCard/projectDetails/Steps')['default']
   const ViteLogo: typeof import('./assets/logos/AllLogos')['ViteLogo']
+  const VueDemo: typeof import('./components/ProjectCard/projectDetails/VueDemo')['default']
   const VuetifyLogo: typeof import('./assets/logos/AllLogos')['VuetifyLogo']
   const assertIsDefined: typeof import('./use/utils/useAsserts')['assertIsDefined']
   const assertIsEventTarget: typeof import('./use/utils/useAsserts')['assertIsEventTarget']
@@ -91,6 +92,13 @@ declare global {
   const useSteps: typeof import('./components/Steps/useSteps')['default']
   const useTemplateRef: typeof import('vue')['useTemplateRef']
   const useTracingCursor: typeof import('./use/utils/useTracingCursor')['default']
+  const vueDemoHeaderListData: typeof import('./components/VueDemo/Header/lists')['vueDemoHeaderListData']
+  const vueDemoLanguages: typeof import('./components/VueDemo/Header/lists')['vueDemoLanguages']
+  const vueDemoPosition: typeof import('./components/VueDemo/vueDemoPosition')['default']
+  const vueDemoSingleCode: typeof import('./components/VueDemo/Main/content/vueDemoSingleCode')['default']
+  const vueDemoSiteList: typeof import('./components/VueDemo/Navigation/vueDemoSiteList')['default']
+  const vueDemoStyleComposable: typeof import('./components/VueDemo/Main/content/vueDemoStyleComposable')['default']
+  const vueDemoStyleOptionCode: typeof import('./components/VueDemo/Main/content/vueDemoStyleOptionCode')['default']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
   const watchPostEffect: typeof import('vue')['watchPostEffect']
@@ -126,6 +134,7 @@ declare module 'vue' {
     readonly StackedCard: UnwrapRef<typeof import('./components/ProjectCard/projectDetails/StackedCard')['default']>
     readonly Steps: UnwrapRef<typeof import('./components/ProjectCard/projectDetails/Steps')['default']>
     readonly ViteLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['ViteLogo']>
+    readonly VueDemo: UnwrapRef<typeof import('./components/ProjectCard/projectDetails/VueDemo')['default']>
     readonly VuetifyLogo: UnwrapRef<typeof import('./assets/logos/AllLogos')['VuetifyLogo']>
     readonly assertIsDefined: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsDefined']>
     readonly assertIsEventTarget: UnwrapRef<typeof import('./use/utils/useAsserts')['assertIsEventTarget']>
@@ -199,6 +208,13 @@ declare module 'vue' {
     readonly useSteps: UnwrapRef<typeof import('./components/Steps/useSteps')['default']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
     readonly useTracingCursor: UnwrapRef<typeof import('./use/utils/useTracingCursor')['default']>
+    readonly vueDemoHeaderListData: UnwrapRef<typeof import('./components/VueDemo/Header/lists')['vueDemoHeaderListData']>
+    readonly vueDemoLanguages: UnwrapRef<typeof import('./components/VueDemo/Header/lists')['vueDemoLanguages']>
+    readonly vueDemoPosition: UnwrapRef<typeof import('./components/VueDemo/vueDemoPosition')['default']>
+    readonly vueDemoSingleCode: UnwrapRef<typeof import('./components/VueDemo/Main/content/vueDemoSingleCode')['default']>
+    readonly vueDemoSiteList: UnwrapRef<typeof import('./components/VueDemo/Navigation/vueDemoSiteList')['default']>
+    readonly vueDemoStyleComposable: UnwrapRef<typeof import('./components/VueDemo/Main/content/vueDemoStyleComposable')['default']>
+    readonly vueDemoStyleOptionCode: UnwrapRef<typeof import('./components/VueDemo/Main/content/vueDemoStyleOptionCode')['default']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
     readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>

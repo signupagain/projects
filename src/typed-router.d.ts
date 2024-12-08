@@ -22,5 +22,6 @@ declare module 'vue-router/auto-routes' {
     '/colorful-bar/': RouteRecordInfo<'/colorful-bar/', '/colorful-bar', Record<never, never>, Record<never, never>>,
     '/stacked-card/': RouteRecordInfo<'/stacked-card/', '/stacked-card', Record<never, never>, Record<never, never>>,
     '/steps/': RouteRecordInfo<'/steps/', '/steps', Record<never, never>, Record<never, never>>,
+    '/vue-demo/': RouteRecordInfo<'/vue-demo/', '/vue-demo', Record<never, never>, Record<never, never>>,
   }
 }

@@ -1,6 +1,7 @@
 @use 'routeTransition';
 @use 'font';
 @use 'util';
+@import url('highlight.js/styles/base16/rebecca.min.css') layer(highlightjs);
 
 :root {
 	scroll-behavior: smooth;
