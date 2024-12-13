@@ -1,5 +1,6 @@
 <template>
-	<article>
+	<!-- eslint-disable-next-line vue/valid-v-on -->
+	<article @scroll.passive>
 		<hgroup class="mb-5 border-b-md border-primary border-opacity-50">
 			<h1 class="text-h3">作品列表</h1>
 			<p class="mt-2">懸浮在LOGO上可以看使用心得。</p>
