@@ -12,6 +12,7 @@ export default defineNuxtConfig({
 		'@nuxt/ui',
 		'@artmizu/nuxt-prometheus',
 		'@vueuse/nuxt',
+		'@nuxt/content',
 	],
 
 	typescript: {
