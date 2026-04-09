@@ -47,5 +47,9 @@ export default defineAppConfig({
 			label: 'Projects',
 			to: '/projects',
 		},
+		{
+			label: 'About',
+			to: '/about',
+		},
 	],
 })
