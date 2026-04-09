@@ -48,5 +48,9 @@ export default defineContentConfig({
 				url: z.string().nonempty(),
 			}),
 		}),
+		about: defineCollection({
+			type: 'page',
+			source: 'about.md',
+		}),
 	},
 })
