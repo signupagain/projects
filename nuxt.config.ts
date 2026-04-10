@@ -13,6 +13,7 @@ export default defineNuxtConfig({
 		'@artmizu/nuxt-prometheus',
 		'@vueuse/nuxt',
 		'@nuxt/content',
+		'motion-v/nuxt',
 	],
 
 	typescript: {
