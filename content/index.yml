@@ -1,0 +1,55 @@
+seo:
+  title: '王宗彥 - Vue / Nuxt 前端工程師'
+  description: '專注於 Vue 與 Nuxt 生態系的前端工程師，擅長狀態管理與資料導向 UI 開發，致力於打造可持續迭代的 Web 應用。'
+title: |
+  Hi, 我是王宗彥
+  前端工程師
+description: '專注於 Vue 與 Nuxt 生態系的前端工程師，擅長狀態管理與資料導向 UI 開發，致力於打造可持續迭代的 Web 應用。'
+hero:
+  - aria-label: TypeScript
+    icon: simple-icons:typescript
+    color: '#3178C6'
+  - aria-label: Vue
+    icon: simple-icons:vuedotjs
+    color: '#4FC08D'
+  - aria-label: Nuxt
+    icon: simple-icons:nuxt
+    color: '#00DC82'
+  - aria-label: Sass
+    icon: simple-icons:sass
+    color: '#CC6699'
+  - aria-label: Tailwind CSS
+    icon: simple-icons:tailwindcss
+    color: '#06B6D4'
+  - aria-label: Pinia
+    icon: simple-icons:pinia
+    color: '#FFD859'
+  - aria-label: TanStack
+    icon: simple-icons:tanstack
+    color: '#000000'
+  - aria-label: Vite
+    icon: simple-icons:vite
+    color: '#9135FF'
+  - aria-label: Vitest
+    icon: simple-icons:vitest
+    color: '#00FF74'
+  - aria-label: Vuetify
+    icon: simple-icons:vuetify
+    color: '#1867C0'
+  - aria-label: Zod
+    icon: simple-icons:zod
+    color: '#408AFF'
+about:
+  title: '關於我'
+  description: |
+    我是一名前端工程師，專注於 Vue 與 Nuxt 生態系開發，致力於打造可持續迭代的 Web 應用。
+    定期透過官方文件與演算法訓練持續強化工程基礎，將抽象概念轉化為可落地的產品設計與實作。
+experience:
+  title: 工作經驗
+  items:
+    - position: '前端工程師'
+      date: '2025'
+      company:
+        name: 日易科技
+        url: 'https://www.dayeasy-ai.com/'
+        color: '#0d6eb8'
