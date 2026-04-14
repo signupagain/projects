@@ -26,6 +26,13 @@
 			:description="page.description"
 			:hero="page.hero"
 		/>
+		<UPageSection
+			:ui="{
+				container: 'pt-0! lg:grid lg:grid-cols-2 lg:gap-8',
+			}"
+		>
+			<LandingAbout v-bind="page.about" />
+		</UPageSection>
 	</UPage>
 </template>
 
