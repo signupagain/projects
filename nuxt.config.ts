@@ -19,7 +19,7 @@ export default defineNuxtConfig({
 	typescript: {
 		typeCheck: true,
 		nodeTsConfig: {
-			include: ['../env.d.ts'],
+			include: ['../env.d.ts', '../content.config.ts'],
 		},
 	},
 

@@ -1,7 +1,6 @@
 <script setup lang="ts">
-	const route = useRoute()
-	const { data: page } = await useAsyncData(route.path + '-page', () => {
-		return queryCollection('content').path(route.path).first()
+	const { data: page } = await useAsyncData('index-page', () => {
+		return queryCollection('index').first()
 	})
 
 	if (!page.value) {
@@ -22,7 +21,11 @@
 
 <template>
 	<UPage v-if="page">
-		<pre>{{ page }}</pre>
+		<LandingHero
+			:title="page.title"
+			:description="page.description"
+			:hero="page.hero"
+		/>
 	</UPage>
 </template>
 
