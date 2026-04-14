@@ -27,6 +27,7 @@
 			}"
 		>
 			<LandingAbout v-bind="page.about" />
+			<LandingWorkExperience v-bind="page.experience" />
 		</UPageSection>
 	</UPage>
 </template>
