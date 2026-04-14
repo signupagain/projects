@@ -34,5 +34,19 @@ export default defineContentConfig({
 				}),
 			}),
 		}),
+		project: defineCollection({
+			type: 'page',
+			source: 'projects.yml',
+		}),
+		projects: defineCollection({
+			type: 'data',
+			source: 'projects/*.yml',
+			schema: z.object({
+				title: z.string().nonempty(),
+				description: z.string().nonempty(),
+				image: z.string().nonempty(),
+				url: z.string().nonempty(),
+			}),
+		}),
 	},
 })
