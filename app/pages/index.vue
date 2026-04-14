@@ -16,7 +16,11 @@
 
 <template>
 	<UPage v-if="page" as="main">
-		<pre>{{ page }}</pre>
+		<LandingHero
+			:title="page.title"
+			:description="page.description"
+			:hero="page.hero"
+		/>
 	</UPage>
 </template>
 
