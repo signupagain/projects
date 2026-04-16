@@ -37,4 +37,10 @@ export default defineAppConfig({
 			},
 		},
 	},
+	navLinks: [
+		{
+			label: 'Home',
+			to: '/',
+		},
+	],
 })
