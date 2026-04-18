@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 		'@nuxt/eslint',
 		'@nuxt/hints',
 		'@nuxt/image',
-		'@nuxt/test-utils',
+		'@nuxt/test-utils/module',
 		'@nuxt/ui',
 		'@artmizu/nuxt-prometheus',
 		'@vueuse/nuxt',
@@ -18,6 +18,9 @@ export default defineNuxtConfig({
 
 	typescript: {
 		typeCheck: true,
+		tsConfig: {
+			include: ['../layers/**/test/**/*.ts'],
+		},
 		nodeTsConfig: {
 			include: ['../env.d.ts', '../content.config.ts'],
 		},
