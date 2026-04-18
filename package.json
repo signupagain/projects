@@ -23,7 +23,6 @@
 		"@nuxt/eslint": "1.15.2",
 		"@nuxt/hints": "1.0.2",
 		"@nuxt/image": "2.0.0",
-		"@nuxt/test-utils": "4.0.0",
 		"@nuxt/ui": "4.6.0",
 		"@vueuse/nuxt": "14.2.1",
 		"better-sqlite3": "^12.8.0",
@@ -36,9 +35,12 @@
 		"zod": "^4.3.6"
 	},
 	"devDependencies": {
+		"@nuxt/test-utils": "^4.0.2",
 		"@types/node": "^25.5.0",
 		"@vitest/coverage-v8": "^4.1.2",
 		"@vue/test-utils": "^2.4.6",
+		"happy-dom": "^20.9.0",
+		"playwright-core": "^1.59.1",
 		"prettier": "3.8.1",
 		"prettier-plugin-tailwindcss": "^0.7.2",
 		"sass-embedded": "1.92.1",
