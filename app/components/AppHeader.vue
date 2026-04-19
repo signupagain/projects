@@ -18,6 +18,10 @@
 			:ui="{
 				link: 'px-2 py-1',
 			}"
-		/>
+		>
+			<template #list-trailing>
+				<ColorModeBtn />
+			</template>
+		</UNavigationMenu>
 	</div>
 </template>
