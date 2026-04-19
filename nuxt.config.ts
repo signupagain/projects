@@ -22,7 +22,11 @@ export default defineNuxtConfig({
 			include: ['../layers/**/test/**/*.ts'],
 		},
 		nodeTsConfig: {
-			include: ['../env.d.ts', '../content.config.ts'],
+			include: [
+				'../env.d.ts',
+				'../content.config.ts',
+				'../layers/**/vitest.*.ts',
+			],
 		},
 	},
 
