@@ -1,0 +1,23 @@
+{
+	"name": "color-mode-btn",
+	"version": "0.0.0",
+	"type": "module",
+	"main": "./nuxt.config.ts",
+	"dependencies": {
+		"@nuxt/ui": ">=4.6.0",
+		"colord": ">=2.9.3",
+		"tailwindcss": ">=4.2.2"
+	},
+	"devDependencies": {
+		"@types/node": ">=25.5.0",
+		"sass-embedded": ">=1.92.1",
+		"typescript": ">=6.0.2",
+		"vue-tsc": ">=3.2.5",
+		"nuxt": ">=4.3.1",
+		"@nuxt/test-utils": ">=4.0.2",
+		"@vitest/coverage-v8": ">=4.1.2",
+		"@vue/test-utils": ">=2.4.6",
+		"happy-dom": ">=20.9.0",
+		"vitest": ">=4.1.2"
+	}
+}
