@@ -30,6 +30,21 @@
 		duration: 0.6,
 		delay: 0.1,
 	}
+
+	const isColorModeChanging = useIsColorModeChanging()
+	const pasueMarquee = ref(false)
+	let timer: NodeJS.Timeout | null = null
+
+	whenever(isColorModeChanging, () => {
+		pasueMarquee.value = true
+
+		if (timer !== null) return
+
+		timer = setTimeout(() => {
+			pasueMarquee.value = false
+			timer = null
+		}, 650)
+	})
 </script>
 
 <template>
@@ -77,6 +92,9 @@
 		<UMarquee
 			pause-on-hover
 			class="-mx-8 py-2 [--duration:40s] sm:-mx-12 lg:-mx-16"
+			:ui="{
+				content: pasueMarquee ? '[animation-play-state:paused]' : '',
+			}"
 		>
 			<Motion
 				v-for="(item, index) of hero"
