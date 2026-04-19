@@ -22,6 +22,7 @@ export default defineAppConfig({
 			target: '_blank',
 		},
 	],
+	credits: 'Built with ZongYan • © ' + new Date().getFullYear(),
 	ui: {
 		colors: {
 			primary: 'blue',
