@@ -3,6 +3,11 @@
 
 @source '../../../content/**/*';
 
+@theme static {
+	--font-sans: 'Noto Sans TC', sans-serif;
+	--font-serif: 'Noto Serif SC', serif;
+}
+
 :root {
 	--ui-container: var(--container-4xl);
 
