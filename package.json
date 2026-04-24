@@ -25,6 +25,7 @@
 		"@nuxt/image": "2.0.0",
 		"@nuxt/ui": "4.6.0",
 		"@nuxtjs/mdc": "^0.21.1",
+		"@orpc/contract": "^1.14.0",
 		"@vueuse/nuxt": "14.2.1",
 		"better-sqlite3": "^12.8.0",
 		"colord": "^2.9.3",
