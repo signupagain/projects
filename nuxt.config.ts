@@ -38,10 +38,6 @@ export default defineNuxtConfig({
 		},
 	},
 
-	runtimeConfig: {
-		pexelToken: process.env.PEXEL_TOKEN,
-	},
-
 	css: ['~/assets/css/main.css'],
 
 	app: {
@@ -55,5 +51,15 @@ export default defineNuxtConfig({
 				},
 			],
 		},
+	},
+
+	vite: {
+		optimizeDeps: {
+			include: ['@tanstack/vue-query', 'ms', 'colord'],
+		},
+	},
+
+	icon: {
+		serverBundle: 'remote',
 	},
 })
