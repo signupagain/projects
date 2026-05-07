@@ -23,6 +23,9 @@
 				}
 			)
 		},
+		key(route) {
+			return route.name
+		},
 	})
 
 	const { data: page } = await useAsyncData('gallery-page', () =>
@@ -43,10 +46,36 @@
 		description: page.value?.seo.description || page.value?.description,
 		ogDescription: page.value?.seo.description || page.value?.description,
 	})
+
+	const pageEl = useTemplateRef('page')
+	const visibleGalleryBottom = useVisibleGalleryBottom()
+
+	onMounted(() => {
+		if (pageEl.value)
+			useEventListener(
+				pageEl.value,
+				'scroll',
+				() => {
+					visibleGalleryBottom.value =
+						(pageEl.value?.scrollTop || 0) + (pageEl.value?.offsetHeight || 0)
+				},
+				{ passive: true },
+			)
+	})
+
+	onBeforeRouteUpdate((to, from) => {
+		if (
+			(to.name === 'gallery-id' && !!to.params.id) ||
+			(from.name === 'gallery-id' && !!from.params.id)
+		)
+			return
+
+		pageEl.value?.scrollTo(0, 0)
+	})
 </script>
 
 <template>
-	<div v-if="page">
+	<div v-if="page" ref="page" class="h-screen overflow-y-scroll">
 		<UPageHero
 			:title="page.title"
 			:description="page.description"
@@ -54,6 +83,7 @@
 				description: 'text-pretty',
 			}"
 		/>
+		<GalleryEngine />
 	</div>
 </template>
 
