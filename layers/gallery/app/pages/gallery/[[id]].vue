@@ -1,4 +1,6 @@
 <script setup lang="ts">
+	import { useQuery } from '@tanstack/vue-query'
+
 	export type GalleryPageQuery = {
 		search?: string
 	}
@@ -51,6 +53,23 @@
 			)
 	})
 
+	const route = useRoute('gallery-id')
+	const id = computed(() => +(route.params.id || NaN))
+	// Suspense is causing an unknown error without any error message or warning, and the Nitro server is also blocked.
+	const { data /* , suspense */ } = useQuery(usePhotoOptions(id))
+
+	// onServerPrefetch(async () => {
+	// 	const { error } = await suspense()
+
+	// 	if (error && import.meta.dev) {
+	// 		console.error('Error fetching photos:', error)
+	// 	}
+	// })
+
+	const cardData = computed<typeof data.value | null>((old) =>
+		isNaN(id.value) && old ? old : (data.value ?? null),
+	)
+
 	onBeforeRouteUpdate((to, from) => {
 		if (
 			(to.name === 'gallery-id' && !!to.params.id) ||
@@ -72,6 +91,9 @@
 			}"
 		/>
 		<GalleryEngine />
+		<ClientOnly>
+			<LazyGalleryCard v-if="cardData" :data="cardData" />
+		</ClientOnly>
 	</main>
 </template>
 
