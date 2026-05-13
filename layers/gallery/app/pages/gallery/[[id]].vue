@@ -93,6 +93,8 @@
 		pageEl.value?.scrollTo(0, 0)
 	})
 
+	const introEl = useTemplateRef('intro')
+
 	const dials: SpeedDialsProps['dials'] = [
 		{
 			icon: 'lucide:chevron-up',
@@ -104,6 +106,15 @@
 					top: 0,
 					behavior: 'smooth',
 				})
+			},
+		},
+		{
+			icon: 'lucide:book',
+			label: '頁面主旨',
+			onClick: () => {
+				if (!introEl.value) return
+
+				introEl.value.toggle()
 			},
 		},
 	]
@@ -122,6 +133,7 @@
 		<ClientOnly>
 			<LazyGalleryCard v-if="cardData" hydrate-on-idle :data="cardData" />
 		</ClientOnly>
+		<GalleryIntro ref="intro" />
 		<SpeedDials :dials="dials" />
 	</div>
 </template>
