@@ -29,6 +29,10 @@ export default defineNuxtConfig({
 		image: {
 			provider: 'netlify',
 		},
+
+		routeRules: {
+			'/gallery/**': { isr: 60 * 30 },
+		},
 	},
 
 	extends: ['../colorModeBtn', '../speedDials'],
