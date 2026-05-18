@@ -3,6 +3,14 @@ export default defineNuxtConfig({
 	compatibilityDate: '2025-07-15',
 	devtools: { enabled: true },
 
+	$production: {
+		routeRules: {
+			'/': { prerender: true },
+			'/projects': { prerender: true },
+			'/about': { prerender: true },
+		},
+	},
+
 	modules: [
 		'@nuxt/a11y',
 		'@nuxt/eslint',
