@@ -109,7 +109,11 @@
 </script>
 
 <template>
-	<main v-if="page" ref="page" class="h-screen overflow-y-scroll">
+	<main
+		v-if="page"
+		ref="page"
+		class="scrollbar-thin h-screen overflow-y-scroll"
+	>
 		<UPageHero
 			:title="page.title"
 			:description="page.description"
