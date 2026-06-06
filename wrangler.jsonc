@@ -1,0 +1,9 @@
+{
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "projects",
+			"database_id": "d1717a93-a331-45c1-b4cd-2971b7ec5369",
+		},
+	],
+}

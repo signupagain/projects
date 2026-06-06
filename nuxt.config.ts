@@ -1,11 +1,30 @@
+const isLocalDev =
+	process.env.NETLIFY !== 'true' && process.env.CF_PAGES !== '1'
+
+const getImageProvider = () => {
+	if (process.env.NETLIFY === 'true') {
+		return 'netlify'
+	}
+
+	if (process.env.CF_PAGES === '1') {
+		return 'cloudflare'
+	}
+
+	return 'ipx'
+}
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	compatibilityDate: '2025-07-15',
 	devtools: { enabled: true },
 
+	$development: {
+		modules: [isLocalDev ? '@artmizu/nuxt-prometheus' : null].filter(Boolean),
+	},
+
 	$production: {
 		image: {
-			provider: 'netlify',
+			provider: getImageProvider(),
 		},
 
 		routeRules: {
@@ -22,7 +41,6 @@ export default defineNuxtConfig({
 		'@nuxt/image',
 		'@nuxt/test-utils/module',
 		'@nuxt/ui',
-		'@artmizu/nuxt-prometheus',
 		'@vueuse/nuxt',
 		'@nuxt/content',
 		'motion-v/nuxt',

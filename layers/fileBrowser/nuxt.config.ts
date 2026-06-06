@@ -11,7 +11,8 @@ export default defineNuxtConfig({
 
 	runtimeConfig: {
 		public: {
-			baseURL: process.env.URL || 'https://localhost:3000',
+			baseURL:
+				process.env.URL || process.env.CF_PAGES_URL || 'https://localhost:3000',
 		},
 	},
 })

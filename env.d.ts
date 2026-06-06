@@ -8,7 +8,11 @@ declare namespace NodeJS {
 		readonly VUE_QUERY_STALE_TIME: string
 
 		/* Nelify */
-		readonly NETLIFY: string
+		readonly NETLIFY: string // "true" / "false"
 		readonly URL: string
+
+		/* Cloudflare */
+		readonly CF_PAGES: string // "1" / "0"
+		readonly CF_PAGES_URL: string
 	}
 }

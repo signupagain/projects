@@ -6,8 +6,21 @@ const certCertPath = path.resolve(process.cwd(), 'certs/localhost.pem')
 
 const useLocalHttps =
 	process.env.NETLIFY !== 'true' && // skip on Netlify
+	process.env.CF_PAGES !== '1' && // skip on Cloudflare Pages
 	fs.existsSync(certKeyPath) &&
 	fs.existsSync(certCertPath)
+
+const getImageProvider = () => {
+	if (process.env.NETLIFY === 'true') {
+		return 'netlify'
+	}
+
+	if (process.env.CF_PAGES === '1') {
+		return 'cloudflare'
+	}
+
+	return 'ipx'
+}
 
 export default defineNuxtConfig({
 	$development: {
@@ -17,7 +30,7 @@ export default defineNuxtConfig({
 					https: {
 						key: fs.readFileSync(certKeyPath).toString(),
 						cert: fs.readFileSync(certCertPath).toString(),
-					} as unknown as Record<string, string>,
+					},
 				}
 			:	{}),
 			host: '0.0.0.0',
@@ -27,7 +40,7 @@ export default defineNuxtConfig({
 
 	$production: {
 		image: {
-			provider: 'netlify',
+			provider: getImageProvider(),
 		},
 
 		routeRules: {
